@@ -1,0 +1,17 @@
+server:
+  port: 8080
+  
+spring:
+  #数据源配置
+      datasource:
+          username: root
+          password: admin
+          url: jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=UTF-8&useSSL=true
+          driver-class-name: com.mysql.jdbc.Driver
+          max-idle: 20
+          min-idle: 10
+          type: org.apache.commons.dbcp2.BasicDataSource
+
+mybatis-plus:
+  mapper-locations: classpath:/mapper.myapp/*Mapper.xml  #mapper扫描
+  type-aliases-package: com.jackie.myapp.entity
